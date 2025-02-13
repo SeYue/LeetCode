@@ -1,6 +1,6 @@
 ﻿public class 移除元素
 {
-	public static void Test()
+	public 移除元素()
 	{
 		int[] nums = [3, 2, 2, 3];
 		int val = 3;
@@ -13,7 +13,7 @@
 		}
 	}
 
-	static int RemoveElement(int[] nums, int val)
+	int RemoveElement(int[] nums, int val)
 	{
 		if (nums.Length == 0)
 			return 0;

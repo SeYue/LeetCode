@@ -3,7 +3,7 @@
 
 public class 两数相加
 {
-	public static void Test()
+	public 两数相加()
 	{
 		Console.WriteLine("两数相加");
 
@@ -33,7 +33,8 @@ public class 两数相加
 			tmp = tmp.next;
 		}
 	}
-	public static ListNode AddTwoNumbers(ListNode l1, ListNode l2)
+
+	public ListNode AddTwoNumbers(ListNode l1, ListNode l2)
 	{
 		return AddToNode(l1, l2, 0);
 	}

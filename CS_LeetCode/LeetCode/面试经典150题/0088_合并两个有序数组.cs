@@ -42,7 +42,7 @@ nums2.length == n
 
 public class 合并两个有序数组
 {
-	public static void Test()
+	public 合并两个有序数组()
 	{
 		int[] nums1 = [2, 2, 3, 0, 0, 0];
 		int[] nums2 = [1, 5, 6];
@@ -56,7 +56,7 @@ public class 合并两个有序数组
 		Console.WriteLine();
 	}
 
-	static void Run(int[] nums1, int m, int[] nums2, int n)
+	void Run(int[] nums1, int m, int[] nums2, int n)
 	{
 		int i = m - 1, j = n - 1;
 		int k = m + n - 1;

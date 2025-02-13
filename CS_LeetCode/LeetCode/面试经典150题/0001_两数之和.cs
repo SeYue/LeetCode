@@ -20,7 +20,7 @@ using System.Text;
 
 public class 两数之和
 {
-	public static void Test()
+	public 两数之和()
 	{
 		int[] nums = new[] { 1, 1, 1, 1, 1, 4, 1, 1, 1, 1, 1, 7, 1, 1, 1, 1, 1 };
 		var target = 11;
@@ -39,7 +39,7 @@ public class 两数之和
 		Console.WriteLine(sb.ToString());
 	}
 
-	public static int[] TwoSum(int[] nums, int target)
+	public int[] TwoSum(int[] nums, int target)
 	{
 		Dictionary<int, int> dic = new Dictionary<int, int>();
 		int _index = 0;
