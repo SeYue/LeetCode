@@ -5,17 +5,17 @@ public class 最长回文子串
 {
 	public 最长回文子串()
 	{
-		string originStr = "babad";
-		var str = CenterExtensionMethod(originStr);
-		Console.WriteLine($"{originStr}\t{str}");
+		//string originStr = "babad";
+		//var str = CenterExtensionMethod(originStr);
+		//Console.WriteLine($"{originStr}\t{str}");
 
-		originStr = "cbbd";
-		str = CenterExtensionMethod(originStr);
-		Console.WriteLine($"{originStr}\t{str}");
+		//originStr = "cbbd";
+		//str = CenterExtensionMethod(originStr);
+		//Console.WriteLine($"{originStr}\t{str}");
 
-		originStr = "abb";
-		str = CenterExtensionMethod(originStr);
-		Console.WriteLine($"{originStr}\t{str}");
+		//originStr = "abb";
+		//str = CenterExtensionMethod(originStr);
+		//Console.WriteLine($"{originStr}\t{str}");
 	}
 
 	// 暴力解法
@@ -123,45 +123,45 @@ public class 最长回文子串
 	// 中心扩展法
 	// 遍历到数组某一个元素的时候，向左右两边扩张，如果左边的元素和右边的元素相等，则继续扩张，否则停止扩张并返回。如果没有元素了，也一起返回。
 	// 如果有单数长度的字串，则需要对数组进行扩张 abc->#a#b#c#
-	string CenterExtensionMethod(string s)
-	{
-		if (string.IsNullOrEmpty(s) || s.Length == 1)
-		{
-			return s;
-		}
+	//string CenterExtensionMethod(string s)
+	//{
+	//	if (string.IsNullOrEmpty(s) || s.Length == 1)
+	//	{
+	//		return s;
+	//	}
 
-		// 先扩张
-		StringBuilder newStr = new StringBuilder();
-		for (int i = 0; i < s.Length; i++)
-		{
-			newStr.Append("#");
-			newStr.Append(s[i]);
-		}
-		newStr.Append("#");
+	//	// 先扩张
+	//	StringBuilder newStr = new StringBuilder();
+	//	for (int i = 0; i < s.Length; i++)
+	//	{
+	//		newStr.Append("#");
+	//		newStr.Append(s[i]);
+	//	}
+	//	newStr.Append("#");
 
-		// 然后使用中心扩展法搜索回文子串
-		string str = string.Empty;
-		for (int i = 0; i < newStr.Length / 2; i++)
-		{
+	//	// 然后使用中心扩展法搜索回文子串
+	//	string str = string.Empty;
+	//	for (int i = 0; i < newStr.Length / 2; i++)
+	//	{
 
-		}
-	}
+	//	}
+	//}
 
-	string CetnerExtension(StringBuilder sb, int i)
-	{
-		int len = 0;
-		// 从中间往两边扩展
-		for (int k = 0; k <= i && k < (sb.Length - i); k++)
-		{
-			if (sb[i - k] == sb[i + k])
-			{
-				len++;
-			}
-			else
-			{
-				break;
-			}
-		}
-		return len - 1;
-	}
+	//string CetnerExtension(StringBuilder sb, int i)
+	//{
+	//	int len = 0;
+	//	// 从中间往两边扩展
+	//	for (int k = 0; k <= i && k < (sb.Length - i); k++)
+	//	{
+	//		if (sb[i - k] == sb[i + k])
+	//		{
+	//			len++;
+	//		}
+	//		else
+	//		{
+	//			break;
+	//		}
+	//	}
+	//	return len - 1;
+	//}
 }
