@@ -32,8 +32,8 @@
 		}
 	}
 
-	// 一次就移动结束
-	public void Rotate(int[] nums, int k)
+	// 使用额外数组
+	public void Rotate_2(int[] nums, int k)
 	{
 		if (nums.Length <= 1)
 		{
@@ -43,5 +43,75 @@
 		int length = nums.Length;
 		k %= length;
 
+		int[] tempNums = new int[length];
+		for (int i = 0; i < length; i++)
+		{
+			tempNums[(i + k) % length] = nums[i];
+		}
+		tempNums.CopyTo(nums, 0);
+	}
+
+	// 反转数组
+	public void Rotate_3(int[] nums, int k)
+	{
+		if (nums.Length <= 1)
+		{
+			return;
+		}
+
+		int length = nums.Length;
+		k %= length;
+
+		Reverse(nums, 0, length - 1);
+		Reverse(nums, 0, k - 1);
+		Reverse(nums, k, length - 1);
+	}
+
+	void Reverse(int[] nums, int startIndex, int endIndex)
+	{
+		int tempNum = 0;
+		for (int i = startIndex, j = endIndex; i < j; i++, j--)
+		{
+			tempNum = nums[i];
+			nums[i] = nums[j];
+			nums[j] = tempNum;
+		}
+	}
+
+	// 环状替换
+	public void Rotate(int[] nums, int k)
+	{
+		if (nums.Length <= 1)
+		{
+			return;
+		}
+
+		int length = nums.Length;
+		k %= length;
+		if (k == 0)
+		{
+			return;
+		}
+
+		int count = 0;
+		for (int start = 0; count < length; start++)
+		{
+			int current = start;    // 当前循环链的索引
+			int prev = nums[current];
+
+			do
+			{
+				int nextIndex = (current + k) % length;
+
+				int tempValue = nums[nextIndex];
+				nums[nextIndex] = prev;
+
+				current = nextIndex;
+				prev = tempValue;
+
+				count++;
+			}
+			while (current != start);
+		}
 	}
 }
