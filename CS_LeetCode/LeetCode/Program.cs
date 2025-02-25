@@ -1,2 +1,2 @@
 ﻿Console.WriteLine("Hello World!");
-new 轮转数组();
+new 爬楼梯();
