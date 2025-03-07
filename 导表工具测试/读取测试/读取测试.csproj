@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="EXCEL_DATA">
+      <HintPath>..\..\导表工具\导表工具\bin\Debug\Output\CS\Dll\EXCEL_DATA.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
